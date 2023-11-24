@@ -5,7 +5,7 @@ let verticalShift=20 //20,40,80,100
 
 function setup_wallpaper(pWallpaper) {
     
-    pWallpaper.output_mode(GRID_WALLPAPER);
+    pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
@@ -51,100 +51,137 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //cat
   strokeWeight(2)
   stroke(0,0,0,225)
-
+  
   //head
-  line(110,120,110,135)//right straight down
-  line(110,135,105,140)//right down diagonal
-  line(105,140,85,140)//straight bottom
-  line(85,140,80,135)//left down diagonal
-  line(80,135,80,120)//left straight
-  line(80,120,85,115)//left diagonal
-  line(85,115,105,115)//top straight
-  line(105,115,110,120)//top right diagonal
-
-  //ear
-  line(80,120,80,105)//left ear
-  line(80,105,85,115)
-  line(80,105,90,115)
-  line(110,120,110,105)//right ear
-  line(110,105,105,115)
-  line(110,105,100,115)
-  //nose
-  line(90,130,100,130)
-  line(90,130,95,135)
-  line(100,130,95,135)
-  line(95,135,100,140) //mouth lines
-  line(95,135,90,140)
+  beginShape()
+  vertex(110,120)//right straight down
+  vertex(110,135)//right down diagonal
+  vertex(105,140)//straight bottom
+  vertex(85,140)//left down diagonal
+  vertex(80,135)//left straight
+  vertex(80,120)//left diagonal
+  vertex(85,115,)//top straight
+  vertex(105,115)//top right diagonal
+  vertex(110,120)
+  endShape()
+//left ear
+  beginShape() 
+  vertex(80,105)
+  vertex(80,120)
+  vertex(85,115)
+  vertex(90,115)
+  vertex(82,107)
+  vertex(85,115)
+  endShape()
+//right ear
+  beginShape()
+  vertex(110,105)
+  vertex(110,120)
+  vertex(105,115)
+  vertex(100,115)
+  vertex(108,107)
+  vertex(105,115)
+  endShape()
+//nose
+  beginShape()
+  vertex(90,130)
+  vertex(99,130)
+  vertex(95,135)
+  vertex(90,130)
+  endShape()
+//mouth
+  beginShape()
+  vertex(95,135)
+  vertex(100,140)
+  vertex(90,140)
+  vertex(95,135)
+  endShape()
  
   strokeWeight(1.5)
   line(89,133,77,132)//left whiskers
   line(90,135,70,135)
   line(89,137,77,139)
-  line(101,133,113,132)//left whiskers
+  line(101,133,113,132)//right whiskers
   line(100,135,120,135)
   line(101,137,113,139)
-
-  strokeWeight(2)
  //eyes
+  strokeWeight(2)//black eyes
   fill(0,0,0)
   ellipse(87,125,5,5)
   ellipse(102,125,5,5)
-  strokeWeight(0)
+  strokeWeight(0)//white glint in eyes
   fill(300,300,300)
   ellipse(85,123.5,2,2)
   ellipse(100,123.5,2,2)
  
   strokeWeight(2)
 //body
-  line(80,130,35,130)
-  line(35,130,30,135)
-  line(45,155,75,155)//belly
-  line(102,140,90,155)//neck
-  line(90,155,85,155)  
-  line(30,135,28,143) // to be removed
-  //tail
-  line(28,142,27,137)
-  line(27,137,19,127)
-  line(19,127,21,120)
-  line(21,120,17,110)
-  line(17,110,17,105)
-  line(17,105,22,105)
-  line(22,105,22,110)
-  line(22,110,26,120)
-  line(26,120,24,127)
-  line(24,127,30,135)
-  line(28,143,25,145)//leg
-  line(25,145,28,155)
-  line(28,155,28,165)
-  line(28,165,30,170)
-  line(30,170,30,176)//back paw front
-  line(30,176,37,176)
-  line(37,176,37,173)
-  line(40,175,40,172)
-  line(37,175.5,40,175.5)
-  line(40,172,37,170)
-  line(37,170,37,165)
-  line(37,165,45,155)
-  line(42,174.7,41,174.7)//back paw back
-  line(42.5,174.7,42.5,172.5)
-  line(45,174.5,45,172)
-  line(42,174.5,45,174.5)
-  line(45,171,42,169)
-  line(42,164.5,42,169.5)
-  line(42,165,50,155)
-  line(75,155,75,170)//front paw front
-  line(75,170,77,173.5)
-  line(77,173.5,77,177)
-  line(77,177,82,177)
-  line(83,177,83,174)
-  line(84,176.5,86,176.5)
-  line(86,176.5,86,172.5)
-  line(84,169,86,172.5)
-  line(84,155,84,168)
-  line(88,155,88,165)//front back paw
-  line(88,165,90,168.5)
-  line(90,168.5,90,172)
-  line(90,172,86,172)
+  beginShape()
+  vertex(102,140)//starts at chin/neck on right 
+  vertex(85,140)
+  vertex(80,135)
+  vertex(80,130)
+  vertex(35,130)
+  vertex(30,135)
+  vertex(24,127)//tail
+  vertex(26,120)
+  vertex(22,110)
+  vertex(22,105)
+  vertex(17,105)
+  vertex(17,110)
+  vertex(21,120)
+  vertex(19,127)
+  vertex(27,137)
+  vertex(28,142)
+  vertex(25,145)//leg
+  vertex(28,155)
+  vertex(28,165)
+  vertex(30,170)
+  vertex(30,176)//back paw front
+  vertex(37,176)
+  vertex(37,173)
+  vertex(37,175.5)
+  vertex(40,175.5)
+  vertex(40,175)
+  vertex(40,172)
+  vertex(37,170)
+  vertex(37,165)
+  vertex(45,155)//transition to back paw back
+  vertex(37,165)
+  vertex(37,170)
+  vertex(40,172)
+  vertex(40,174.7)
+  vertex(42,174.7)
+  vertex(42,172.7)
+  vertex(42,174.5)
+  vertex(45,174.5)
+  vertex(45,171)
+  vertex(42,169.5)
+  vertex(42,165)
+  vertex(50,155)//belly
+  vertex(44.23,155)
+  vertex(75,155)
+  vertex(75,170)//front paw front
+  vertex(77,173.5)
+  vertex(77,177)
+  vertex(83,177)
+  vertex(83,174)
+  vertex(83,176.5)
+  vertex(86,176.5)
+  vertex(86,172)
+  vertex(84,169)
+  vertex(84,155)//transitioning to front paw front
+  vertex(84,169) 
+  vertex(86,172)
+  vertex(90,172)
+  vertex(90,168.5)
+  vertex(88,165)
+  vertex(88,155)//fin paw connect rest of body
+  vertex(83,155)
+  vertex(90,155)
+  vertex(102,140)
+  endShape()
+
  //wool
  strokeWeight(2)
  fill(225,225,225)
