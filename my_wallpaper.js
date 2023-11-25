@@ -1,7 +1,12 @@
 //your parameter variables go here!
 //cottagecore background variabkes
-let horozontalShift=20 //20,40,80,100 
-let verticalShift=20 //20,40,80,100
+let horozontalShift=20 //20,40,80,100 originally 20
+let verticalShift=20 //20,40,80,100  originally 20
+let ScalingCat=1//scale of cat originally 1
+let ScalingWool=1//scale of wool originally 1
+let Nosex=92.5//originally 92.5 middle of nose that is used for cat origin
+let Nosey=132.5//originally 132.5 middle of nose that is used for cat origin
+
 
 function setup_wallpaper(pWallpaper) {
     
@@ -48,141 +53,159 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(0,9*horozontalShift,200,9*horozontalShift)
   line(0,10*horozontalShift,200,10*horozontalShift)
 
-  //cat
+  scale(ScalingCat)
+//cat
   strokeWeight(2)
   stroke(0,0,0,225)
-  
-  //head
+  //body
+  strokeWeight(2)
   beginShape()
-  vertex(110,120)//right straight down
-  vertex(110,135)//right down diagonal
-  vertex(105,140)//straight bottom
-  vertex(85,140)//left down diagonal
-  vertex(80,135)//left straight
-  vertex(80,120)//left diagonal
-  vertex(85,115,)//top straight
-  vertex(105,115)//top right diagonal
-  vertex(110,120)
+  vertex(Nosex+9.5,Nosey+7.5)//starts at chin/neck on right 
+  vertex(Nosex-7.5,Nosey+7.5)
+  vertex(Nosex-12.5,Nosey+2.5)
+  vertex(Nosex-12.5,Nosey-2.5)
+  vertex(Nosex-57.5,Nosey-2.5)
+  vertex(Nosex-62.5,Nosey+2.5)
+  vertex(Nosex-68.5,Nosey-5.5)//tail
+  vertex(Nosex-66.5,Nosey-12.5)
+  vertex(Nosex-70.5,Nosey-22.5)
+  vertex(Nosex-70.5,Nosey-27.5)
+  vertex(Nosex-75.5,Nosey-27.5)
+  vertex(Nosex-75.5,Nosey-22.5)
+  vertex(Nosex-71.5,Nosey-12.5)
+  vertex(Nosex-73.5,Nosey-5.5)
+  vertex(Nosex-65.5,Nosey+4.5)
+  vertex(Nosex-64.5,Nosey+9.5)
+  vertex(Nosex-67.5,Nosey+12.5)//leg
+  vertex(Nosex-64.5,Nosey+22.5)
+  vertex(Nosex-64.5,Nosey+32.5)
+  vertex(Nosex-62.5,Nosey+37.5)
+  vertex(Nosex-62.5,Nosey+43.5)//back paw front
+  vertex(Nosex-55.5,Nosey+43.5)
+  vertex(Nosex-55.5,Nosey+40.5)
+  vertex(Nosex-55.5,Nosey+43)
+  vertex(Nosex-52.5,Nosey+43)
+  vertex(Nosex-52.5,Nosey+42.5)
+  vertex(Nosex-52.5,Nosey+39.5)
+  vertex(Nosex-55.5,Nosey+37.5)
+  vertex(Nosex-55.5,Nosey+32.5)
+  vertex(Nosex-47.5,Nosey+22.5)//transition to back paw back
+  vertex(Nosex-55.5,Nosey+32.5)
+  vertex(Nosex-55.5,Nosey+37.5)
+  vertex(Nosex-52.5,Nosey+39.5)
+  vertex(Nosex-52.5,Nosey+40.2)
+  vertex(Nosex-50.5,Nosey+40.2)
+  vertex(Nosex-50.5,Nosey+40.2)
+  vertex(Nosex-50.5,Nosey+42)
+  vertex(Nosex-47.5,Nosey+42)
+  vertex(Nosex-47.5,Nosey+38.5)
+  vertex(Nosex-50.5,Nosey+37)
+  vertex(Nosex-50.5,Nosey+32.5)
+  vertex(Nosex-42.5,Nosey+22.5)//belly
+  vertex(Nosex-48.27,Nosey+22.5)
+  vertex(Nosex-17.5,Nosey+22.5)
+  vertex(Nosex-17.5,Nosey+37.5)//front paw front
+  vertex(Nosex-15.5,Nosey+41)
+  vertex(Nosex-15.5,Nosey+44.5)
+  vertex(Nosex-9.5,Nosey+44.5)
+  vertex(Nosex-9.5,Nosey+41.5)
+  vertex(Nosex-9.5,Nosey+44)
+  vertex(Nosex-6.5,Nosey+44)
+  vertex(Nosex-6.5,Nosey+39.5)
+  vertex(Nosex-8.5,Nosey+36.5)
+  vertex(Nosex-8.5,Nosey+22.5)//transitioning to front paw front
+  vertex(Nosex-8.5,Nosey+36.5) 
+  vertex(Nosex-6.5,Nosey+39.5)
+  vertex(Nosex-2.5,Nosey+39.5)
+  vertex(Nosex-2.5,Nosey+36)
+  vertex(Nosex-4.5,Nosey+32.5)
+  vertex(Nosex-4.5,Nosey+22.5)//fin paw connect rest of body
+  vertex(Nosex-9.5,Nosey+22.5)
+  vertex(Nosex-2.5,Nosey+22.5)
+  vertex(Nosex+9.5,Nosey+7.5)
   endShape()
-//left ear
+ //head
+  beginShape()
+  vertex(Nosex+17.5,Nosey-12.5)//right straight down
+  vertex(Nosex+17.5,Nosey+2.5)//right down diagonal
+  vertex(Nosex+12.5,Nosey+7.5)//straight bottom
+  vertex(Nosex-7.5,Nosey+7.5)//left down diagonal
+  vertex(Nosex-12.5,Nosey+2.5)//left straight
+  vertex(Nosex-12.5,Nosey-12.5)//left diagonal
+  vertex(Nosex-7.5,Nosey-17.5)//top straight
+  vertex(Nosex+12.5,Nosey-17.5)//top right diagonal
+  vertex(Nosex+17.5,Nosey-12.5)
+  endShape()
+ //left ear
   beginShape() 
-  vertex(80,105)
-  vertex(80,120)
-  vertex(85,115)
-  vertex(90,115)
-  vertex(82,107)
-  vertex(85,115)
+  vertex(Nosex-12.5,Nosey-27.5)
+  vertex(Nosex-12.5,Nosey-12.5)
+  vertex(Nosex-7.5,Nosey-17.5)
+  vertex(Nosex-2.5,Nosey-17.5)
+  vertex(Nosex-10.5,Nosey-25.5)
+  vertex(Nosex-7.5,Nosey-17.5)
   endShape()
-//right ear
+  //right ear
   beginShape()
-  vertex(110,105)
-  vertex(110,120)
-  vertex(105,115)
-  vertex(100,115)
-  vertex(108,107)
-  vertex(105,115)
+  vertex(Nosex+17.5,Nosey-27.5)
+  vertex(Nosex+17.5,Nosey-12.5)
+  vertex(Nosex+12.5,Nosey-17.5)
+  vertex(Nosex+7.5,Nosey-17.5)
+  vertex(Nosex+15.5,Nosey-25.5)
+  vertex(Nosex+12.5,Nosey-17.5)
   endShape()
-//nose
+  //nose
   beginShape()
-  vertex(90,130)
-  vertex(99,130)
-  vertex(95,135)
-  vertex(90,130)
+  vertex(Nosex-2.5,Nosey-2.5)
+  vertex(Nosex+7,Nosey-2.5)
+  vertex(Nosex+2.5,Nosey+2.5)
+  vertex(Nosex-2.5,Nosey-2.5)
   endShape()
-//mouth
+  //mouth
   beginShape()
-  vertex(95,135)
-  vertex(100,140)
-  vertex(90,140)
-  vertex(95,135)
+  vertex(Nosex+2.5,Nosey+2.5)
+  vertex(Nosex+7.5,Nosey+7.5)
+  vertex(Nosex-2.5,Nosey+7.5)
+  vertex(Nosex+2.5,Nosey+2.5)
   endShape()
- 
+//whiskers
   strokeWeight(1.5)
-  line(89,133,77,132)//left whiskers
-  line(90,135,70,135)
-  line(89,137,77,139)
-  line(101,133,113,132)//right whiskers
-  line(100,135,120,135)
-  line(101,137,113,139)
- //eyes
+  beginShape()
+  vertex(Nosex-3.5,Nosey+0.5)//left whiskers
+  vertex(Nosex-15.5,Nosey-0.5)
+  endShape()
+  beginShape()
+  vertex(Nosex-2.5,Nosey+2.5)
+  vertex(Nosex-22.5,Nosey+2.5)
+  endShape()
+  beginShape()
+  vertex(Nosex-3.5,Nosey+4.5)
+  vertex(Nosex-15.5,Nosey+6.5)
+  endShape()
+  beginShape()
+  vertex(Nosex+8.5,Nosey+0.5)//right whiskers
+  vertex(Nosex+20.5,Nosey-0.5)
+  endShape()
+  beginShape()
+  vertex(Nosex+7.5,Nosey+2.5)
+  vertex(Nosex+27.5,Nosey+2.5)
+  endShape()
+  beginShape()
+  vertex(Nosex+8.5,Nosey+4.5)
+  vertex(Nosex+20.5,Nosey+6.5)
+  endShape()
+//eyes
   strokeWeight(2)//black eyes
   fill(0,0,0)
-  ellipse(87,125,5,5)
-  ellipse(102,125,5,5)
+  ellipse(Nosex-5.5,Nosey-7.5,5,5)
+  ellipse(Nosex+9.5,Nosey-7.5,5,5)
   strokeWeight(0)//white glint in eyes
   fill(300,300,300)
-  ellipse(85,123.5,2,2)
-  ellipse(100,123.5,2,2)
- 
-  strokeWeight(2)
-//body
-  beginShape()
-  vertex(102,140)//starts at chin/neck on right 
-  vertex(85,140)
-  vertex(80,135)
-  vertex(80,130)
-  vertex(35,130)
-  vertex(30,135)
-  vertex(24,127)//tail
-  vertex(26,120)
-  vertex(22,110)
-  vertex(22,105)
-  vertex(17,105)
-  vertex(17,110)
-  vertex(21,120)
-  vertex(19,127)
-  vertex(27,137)
-  vertex(28,142)
-  vertex(25,145)//leg
-  vertex(28,155)
-  vertex(28,165)
-  vertex(30,170)
-  vertex(30,176)//back paw front
-  vertex(37,176)
-  vertex(37,173)
-  vertex(37,175.5)
-  vertex(40,175.5)
-  vertex(40,175)
-  vertex(40,172)
-  vertex(37,170)
-  vertex(37,165)
-  vertex(45,155)//transition to back paw back
-  vertex(37,165)
-  vertex(37,170)
-  vertex(40,172)
-  vertex(40,174.7)
-  vertex(42,174.7)
-  vertex(42,172.7)
-  vertex(42,174.5)
-  vertex(45,174.5)
-  vertex(45,171)
-  vertex(42,169.5)
-  vertex(42,165)
-  vertex(50,155)//belly
-  vertex(44.23,155)
-  vertex(75,155)
-  vertex(75,170)//front paw front
-  vertex(77,173.5)
-  vertex(77,177)
-  vertex(83,177)
-  vertex(83,174)
-  vertex(83,176.5)
-  vertex(86,176.5)
-  vertex(86,172)
-  vertex(84,169)
-  vertex(84,155)//transitioning to front paw front
-  vertex(84,169) 
-  vertex(86,172)
-  vertex(90,172)
-  vertex(90,168.5)
-  vertex(88,165)
-  vertex(88,155)//fin paw connect rest of body
-  vertex(83,155)
-  vertex(90,155)
-  vertex(102,140)
-  endShape()
+  ellipse(Nosex-7.5,Nosey-9,2,2)
+  ellipse(Nosex+7.5,Nosey-9,2,2)
 
- //wool
+  scale(ScalingWool)
+//wool
  strokeWeight(2)
  fill(225,225,225)
  rect(115,172.5,25,4)
@@ -193,8 +216,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  ellipse(110,162,22,4)
  ellipse(110,166,22,4)
  ellipse(110,170,22,4)
- 
- 
+
 
 
 
