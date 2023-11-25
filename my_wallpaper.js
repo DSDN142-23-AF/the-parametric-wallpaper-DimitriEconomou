@@ -6,7 +6,8 @@ let ScalingCat=1//scale of cat originally 1
 let ScalingWool=1//scale of wool originally 1
 let Nosex=92.5//originally 92.5 middle of nose that is used for cat origin
 let Nosey=132.5//originally 132.5 middle of nose that is used for cat origin
-
+let Woolx=110//originally 110
+let Wooly=166//originally 166
 
 function setup_wallpaper(pWallpaper) {
     
@@ -208,14 +209,14 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 //wool
  strokeWeight(2)
  fill(225,225,225)
- rect(115,172.5,25,4)
- ellipse(110,166,20,20)
- ellipse(106,166,4,22)
- ellipse(110,166,4,22)
- ellipse(114,166,4,22)
- ellipse(110,162,22,4)
- ellipse(110,166,22,4)
- ellipse(110,170,22,4)
+ rect(Woolx+5,Wooly+6.5,25,4)
+ ellipse(Woolx,Wooly,20,20)
+ ellipse(Woolx-4,Wooly,4,22)//vertical left
+ ellipse(Woolx,Wooly,4,22)//vertical middle
+ ellipse(Woolx+4,Wooly,4,22)//vertical right
+ ellipse(Woolx,Wooly-4,22,4)//horozontal top
+ ellipse(Woolx,Wooly,22,4)//horozontal middle
+ ellipse(Woolx,Wooly+4,22,4)//horozontal bottom
 
 
 
