@@ -1,14 +1,14 @@
 //your parameter variables go here!
 //cottagecore background variabkes
-let horozontalShift=100 //20,40,80,100 originally 20
-let verticalShift=100 //20,40,80,100  originally 20
-let horozontalStrokeColour=1//1=black,2=yellow,3=green,4=red
-let verticalStrokeColour=1//1=black,2=yellow,3=green,4=red
+let horozontalShift=20 //20,40,80,100 originally 20
+let verticalShift=20 //20,40,80,100  originally 20
+let horozontalStrokeColour=3//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=3//1=black,2=yellow,3=green,4=red
 //cat variables
 let ScalingCat=1.5//scale of cat originally 1
 let Nosex=80//originally 92.5 middle of nose that is used for cat origin
 let Nosey=75//originally 132.5 middle of nose that is used for cat origin
-let ShowBody=true//turns the body of the cat on and off (my if statment)
+let ShowBody=false//turns the body of the cat on and off (my if statment)
 //woolvariables
 let ScalingWool=1//scale of wool originally 1
 let Woolx=95//originally 110 (changes x value of wool)
@@ -20,7 +20,7 @@ let Woolfill=4 //changes fill 1 black, 2 white, 3 lightblue, 4 red
 function setup_wallpaper(pWallpaper) {
     
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -42,7 +42,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   else if(verticalStrokeColour==2){
   stroke(214, 210, 60,55)}
   else if(verticalStrokeColour==3){
-  stroke(92, 214, 95,50)}  
+  stroke(92, 214, 95,60)}  
   else if(verticalStrokeColour==4){
    stroke(196,45,45,50)}
  
