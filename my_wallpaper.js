@@ -4,29 +4,43 @@ let horozontalShift=40 //20,40,80,100,200 originally 20
 let verticalShift=40 //20,40,80,100  originally 20
 let horozontalStrokeColour=1//1=black,2=yellow,3=green,4=red
 let verticalStrokeColour=4//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+
 //cat variables
-let ScalingCat=1//scale of cat originally 1
-let Nosex=95//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
-let Nosey=30//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
-let ShowBody=true//turns the body of the cat on and off (my if statment)
+let Nosex=50//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=50//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=false//turns the body of the cat on and off (my if statment)
+let Catstroke=8
+let ScalingCat=2//scale of whole cat
+let ScaleBody=1
+let ScaleHead=0
+let ScaleLeftEar=1.1
+let ScaleRightEar=1 
+let ScaleNose=1 
+let ScaleMouth=1 
+let ScaleWhiskers=1
+let ScaleEyes=1
+
 //woolvariables
 let ScalingWool=0//scale of wool originally 1
-let Woolx=125//originally 110 (changes x value of wool)
-let Wooly=55//originally 166 (changes y value of wool)
+let Woolx=0//originally 110 (changes x value of wool)
+let Wooly=0//originally 166 (changes y value of wool)
 let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
-let Woolfill=3 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let Woolfill=1 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let Woolstroke=0
 
 
 function setup_wallpaper(pWallpaper) {
     
-  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 80;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
@@ -35,8 +49,9 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   
-  //cottagecore background
-  strokeWeight(8)
+  //cottagecore background-----------------------------------------------------------
+  scale(1)
+  strokeWeight(verticalcottagecoreStrokeWeight)
   if(verticalStrokeColour==1){
   stroke(0,0,0,50)}
   else if(verticalStrokeColour==2){
@@ -57,7 +72,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(9*verticalShift,0,9*verticalShift,200)
   line(10*verticalShift,0,10*verticalShift,200)
 
-  strokeWeight(8)
+  strokeWeight(horozontalcottagecoreStrokeWeight)
   if(horozontalStrokeColour==1){
   stroke(0,0,0,50)}
   else if(horozontalStrokeColour==2){
@@ -79,16 +94,17 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(0,9*horozontalShift,200,9*horozontalShift)
   line(0,10*horozontalShift,200,10*horozontalShift)
 
-  scale(ScalingCat)
+  
 //cat
+ scale(ScalingCat)
   strokeWeight(2)
   stroke(0,0,0,225)
   fill(140, 126, 105)
-
+//body---------------------------------------------------------------------
   if(ShowBody){
-  //body
   strokeWeight(2)
-  beginShape()
+  scale(ScaleBody)
+   beginShape()
    vertex(Nosex+9.5,Nosey+7.5)//starts at chin/neck on right 
    vertex(Nosex-7.5,Nosey+7.5)
    vertex(Nosex-12.5,Nosey+2.5)
@@ -153,21 +169,23 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
    vertex(Nosex-2.5,Nosey+22.5)
    vertex(Nosex+9.5,Nosey+7.5)
    endShape()
-
+ 
 }
- //head
+ //head------------------------------------------------------
+ scale(ScaleHead)
   beginShape()
-  vertex(Nosex+17.5,Nosey-12.5)//right straight down
-  vertex(Nosex+17.5,Nosey+2.5)//right down diagonal
-  vertex(Nosex+12.5,Nosey+7.5)//straight bottom
-  vertex(Nosex-7.5,Nosey+7.5)//left down diagonal
-  vertex(Nosex-12.5,Nosey+2.5)//left straight
-  vertex(Nosex-12.5,Nosey-12.5)//left diagonal
-  vertex(Nosex-7.5,Nosey-17.5)//top straight
-  vertex(Nosex+12.5,Nosey-17.5)//top right diagonal
+  vertex(Nosex+17.5,Nosey-12.5)
+  vertex(Nosex+17.5,Nosey+2.5)
+  vertex(Nosex+12.5,Nosey+7.5)
+  vertex(Nosex-7.5,Nosey+7.5)
+  vertex(Nosex-12.5,Nosey+2.5)
+  vertex(Nosex-12.5,Nosey-12.5)
+  vertex(Nosex-7.5,Nosey-17.5)
+  vertex(Nosex+12.5,Nosey-17.5)
   vertex(Nosex+17.5,Nosey-12.5)
   endShape()
- //left ear
+ //left ear-------------------------------------------------
+ scale(ScaleLeftEar) 
   beginShape() 
   vertex(Nosex-12.5,Nosey-27.5)
   vertex(Nosex-12.5,Nosey-12.5)
@@ -176,7 +194,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(Nosex-10.5,Nosey-25.5)
   vertex(Nosex-7.5,Nosey-17.5)
   endShape()
-  //right ear
+  //right ear------------------------------------------------
+  scale(ScaleRightEar) 
   beginShape()
   vertex(Nosex+17.5,Nosey-27.5)
   vertex(Nosex+17.5,Nosey-12.5)
@@ -185,7 +204,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(Nosex+15.5,Nosey-25.5)
   vertex(Nosex+12.5,Nosey-17.5)
   endShape()
-  //nose
+  //nose------------------------------------------------------
+  scale(ScaleNose) 
   fill(189, 102, 123)
   beginShape()
   vertex(Nosex-2.5,Nosey-2.5)
@@ -194,17 +214,19 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(Nosex-2.5,Nosey-2.5)
   endShape()
   fill(140, 126, 105)
-  //mouth
+  //mouth-----------------------------------------------------
+  scale(ScaleMouth) 
   beginShape()
   vertex(Nosex+2.5,Nosey+2.5)
   vertex(Nosex+7.5,Nosey+7.5)
   vertex(Nosex-2.5,Nosey+7.5)
   vertex(Nosex+2.5,Nosey+2.5)
   endShape()
-//whiskers
+//whiskers--------------------------------------------------
+  scale(ScaleWhiskers) 
   strokeWeight(1.5)
   beginShape()
-  vertex(Nosex-3.5,Nosey+0.5)//left whiskers
+  vertex(Nosex-3.5,Nosey+0.5)//left whiskers--------
   vertex(Nosex-15.5,Nosey-0.5)
   endShape()
   beginShape()
@@ -216,7 +238,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(Nosex-15.5,Nosey+6.5)
   endShape()
   beginShape()
-  vertex(Nosex+8.5,Nosey+0.5)//right whiskers
+  vertex(Nosex+8.5,Nosey+0.5)//right whiskers--------
   vertex(Nosex+20.5,Nosey-0.5)
   endShape()
   beginShape()
@@ -227,7 +249,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(Nosex+8.5,Nosey+4.5)
   vertex(Nosex+20.5,Nosey+6.5)
   endShape()
-//eyes
+//eyes--------------------------------------------------------
+ scale(ScaleEyes) 
   strokeWeight(2)//black eyes
   fill(0,0,0)
   ellipse(Nosex-5.5,Nosey-7.5,5,5)
@@ -237,11 +260,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(Nosex-7.5,Nosey-9,2,2)
   ellipse(Nosex+7.5,Nosey-9,2,2)
 
- 
+ //wool---------------------------------------------------------------
  if(FourWoolPattern==40){
   scale(ScalingWool)
-  //wool
-   strokeWeight(2)
+  //wool 1
+   strokeWeight(Woolstroke)
    if(Woolfill==1){
     fill(0,0,0)}
     else if(Woolfill==2){
@@ -251,17 +274,17 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     else if(Woolfill==4){
     fill(186, 20, 20)}
   
-   rect(Woolx+5,Wooly+6.5,25,4)
-   ellipse(Woolx,Wooly,20,20)
-   ellipse(Woolx-4,Wooly,4,22)//vertical left
-   ellipse(Woolx,Wooly,4,22)//vertical middle
-   ellipse(Woolx+4,Wooly,4,22)//vertical right
-   ellipse(Woolx,Wooly-4,22,4)//horozontal top
-   ellipse(Woolx,Wooly,22,4)//horozontal middle
-   ellipse(Woolx,Wooly+4,22,4)//horozontal bottom
+  rect(Woolx+5,Wooly+6.5,25,4)
+  ellipse(Woolx,Wooly,20,20)
+  ellipse(Woolx-4,Wooly,4,22)//vertical left
+  ellipse(Woolx,Wooly,4,22)//vertical middle
+  ellipse(Woolx+4,Wooly,4,22)//vertical right
+  ellipse(Woolx,Wooly-4,22,4)//horozontal top
+  ellipse(Woolx,Wooly,22,4)//horozontal middle
+  ellipse(Woolx,Wooly+4,22,4)//horozontal bottom
   
  //wool 2
- strokeWeight(2)
+ strokeWeight(Woolstroke)
  rect(3.8*Woolx+5,Wooly+6.5,25,4)
  ellipse(3.8*Woolx,Wooly,20,20)
  ellipse(3.8*Woolx-4,Wooly,4,22)//vertical left
@@ -271,7 +294,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  ellipse(3.8*Woolx,Wooly,22,4)//horozontal middle
  ellipse(3.8*Woolx,Wooly+4,22,4)//horozontal bottom
  //wool3
- strokeWeight(2)
+ strokeWeight(Woolstroke)
  rect(Woolx+5,4*Wooly+6.5,25,4)
  ellipse(Woolx,4*Wooly,20,20)
  ellipse(Woolx-4,4*Wooly,4,22)//vertical left
@@ -281,7 +304,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  ellipse(Woolx,4*Wooly,22,4)//horozontal middle
  ellipse(Woolx,4*Wooly+4,22,4)//horozontal bottom
   //wool 4
-  strokeWeight(2)
+  strokeWeight(Woolstroke)
   rect(3.8*Woolx+5,4*Wooly+6.5,25,4)
   ellipse(3.8*Woolx,4*Wooly,20,20)
   ellipse(3.8*Woolx-4,4*Wooly,4,22)//vertical left
@@ -294,7 +317,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  else if (FourWoolPattern==32.5){
   scale(ScalingWool)
 //wool
- strokeWeight(2)
+ strokeWeight(Woolstroke)
  if(Woolfill==1){
   fill(0,0,0)}
   else if(Woolfill==2){
@@ -314,7 +337,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  ellipse(Woolx,Wooly+4,22,4)//horozontal bottom
 
  //wool 2
- strokeWeight(2)
+ strokeWeight(Woolstroke)
  rect(Woolx+65+5,Wooly+75+6.5,25,4)
  ellipse(Woolx+65,Wooly+75,20,20)
  ellipse(Woolx+65-4,Wooly+75,4,22)//vertical left
@@ -327,8 +350,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 }
 else if (FourWoolPattern==37.5){
   scale(ScalingWool)
-//wool
- strokeWeight(2)
+ //wool
+ strokeWeight(Woolstroke)
  if(Woolfill==1){
   fill(0,0,0)}
   else if(Woolfill==2){
@@ -348,7 +371,7 @@ else if (FourWoolPattern==37.5){
  ellipse(Woolx,Wooly+4,22,4)//horozontal bottom
 
  //wool 2
- strokeWeight(2)
+ strokeWeight(Woolstroke)
  rect(Woolx+80+5,Wooly+85+6.5,25,4)
  ellipse(Woolx+80,Wooly+85,20,20)
  ellipse(Woolx+80-4,Wooly+85,4,22)//vertical left
@@ -360,7 +383,7 @@ else if (FourWoolPattern==37.5){
  
 } 
 else if(FourWoolPattern==0){
-  strokeWeight(2)
+  strokeWeight(Woolstroke)
   if(Woolfill==1){
    fill(0,0,0)}
    else if(Woolfill==2){
@@ -380,16 +403,18 @@ else if(FourWoolPattern==0){
   ellipse(Woolx,Wooly+4,0,0)//horozontal bottom
 
 }
-else{//wool
-  strokeWeight(2)
+else{
+  //wool
+  strokeWeight(Woolstroke)
   if(Woolfill==1){
    fill(0,0,0)}
-   else if(Woolfill==2){
+  else if(Woolfill==2){
    fill(225, 225, 225)}
-   else if(Woolfill==3){
+  else if(Woolfill==3){
    fill(146, 209, 205)}  
-   else if(Woolfill==4){
-   fill(186, 20, 20)}
+  else if(Woolfill==4){
+   fill(186, 20, 20)
+  }
  
   rect(Woolx+5,Wooly+6.5,25,4)
   ellipse(Woolx,Wooly,20,20)
