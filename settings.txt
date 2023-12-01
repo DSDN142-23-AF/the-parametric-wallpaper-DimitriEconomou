@@ -1,54 +1,398 @@
 You will need to fill out this file for hand in. 
 
-The bellow is just an example, feel free to disregard this documents contents.
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Wallpaper 1
+//cottagecore background variabkes-------------------------------------------------------------------------------------------------------------------------
+let horozontalShift=20 //20,40,80,100,200 originally 20
+let verticalShift=20 //20,40,80,100  originally 20
+let horozontalStrokeColour=4//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=4//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+//cat variables---------------------------------------------------------------------------------------------------------------------------------------------
+let Nosex=49//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=61//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=false//turns the body of the cat on and off (my if statment)
+//all of the cat strokes below are originally 2 except whiskers (1.5)
+let BodyStrokeWeight=1.5
+let HeadStrokeWeight=1.5
+let EarStrokeWeight=1.5
+let NoseStrokeWeight=1.5
+let MouthStrokeWeight=1.5
+let WhiskersStrokeWeight=1
+let EyesStrokeWeight=1.5
+let ScalingCat=2//scale of whole cat
+//woolvariables---------------------------------------------------------------------------------------------------------------------------------------------
+let ScalingWool=0.5//scale of wool originally 1
+let Woolx=40//originally 110 (changes x value of wool)
+let Wooly=40//originally 166 (changes y value of wool)
+let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
+let Woolfill=3 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let WoolStrokeWeight=1//stroke weight of wool (originally 2)
 
-Your final settings.txt will look something like this when you are finished:
-
-/////////////////////////////////
-
-Wallpaper 1:
-
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
 
 function setup_wallpaper(pWallpaper) {
+    
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
-/////////////////////////////////
 
-Wallpaper 2:
+//////////////////////////////////////////////////////////////////////////////////////////
+Wallpaper 2
 
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+//cottagecore background variabkes-------------------------------------------------------------------------------------------------------------------------
+let horozontalShift=20 //20,40,80,100,200 originally 20
+let verticalShift=20 //20,40,80,100  originally 20
+let horozontalStrokeColour=3//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=3//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+//cat variables---------------------------------------------------------------------------------------------------------------------------------------------
+let Nosex=80//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=80//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=true//turns the body of the cat on and off (my if statment)
+//all of the cat strokes below are originally 2 except whiskers (1.5)
+let BodyStrokeWeight=2
+let HeadStrokeWeight=2
+let EarStrokeWeight=2
+let NoseStrokeWeight=2
+let MouthStrokeWeight=2
+let WhiskersStrokeWeight=1.5
+let EyesStrokeWeight=2
+let ScalingCat=1.5//scale of whole cat
+//woolvariables---------------------------------------------------------------------------------------------------------------------------------------------
+let ScalingWool=1//scale of wool originally 1
+let Woolx=100//originally 110 (changes x value of wool)
+let Wooly=115//originally 166 (changes y value of wool)
+let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
+let Woolfill=4 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let WoolStrokeWeight=2//stroke weight of wool (originally 2)
+
 
 function setup_wallpaper(pWallpaper) {
+    
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+Wallpaper 3
+
+//cottagecore background variabkes-------------------------------------------------------------------------------------------------------------------------
+let horozontalShift=40 //20,40,80,100,200 originally 20
+let verticalShift=40 //20,40,80,100  originally 20
+let horozontalStrokeColour=1//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=1//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+//cat variables---------------------------------------------------------------------------------------------------------------------------------------------
+let Nosex=50//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=60//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=false//turns the body of the cat on and off (my if statment)
+//all of the cat strokes below are originally 2 except whiskers (1.5)
+let BodyStrokeWeight=2
+let HeadStrokeWeight=2
+let EarStrokeWeight=2
+let NoseStrokeWeight=2
+let MouthStrokeWeight=2
+let WhiskersStrokeWeight=1.5
+let EyesStrokeWeight=2
+let ScalingCat=2//scale of whole cat
+//woolvariables---------------------------------------------------------------------------------------------------------------------------------------------
+let ScalingWool=1//scale of wool originally 1
+let Woolx=50//originally 110 (changes x value of wool)
+let Wooly=0//originally 166 (changes y value of wool)
+let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
+let Woolfill=4 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let WoolStrokeWeight=2//stroke weight of wool (originally 2)
+
+
+function setup_wallpaper(pWallpaper) {
+    
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+Wallpaper 4
+
+//cottagecore background variabkes-------------------------------------------------------------------------------------------------------------------------
+let horozontalShift=20 //20,40,80,100,200 originally 20
+let verticalShift=20 //20,40,80,100  originally 20
+let horozontalStrokeColour=2//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=2//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+//cat variables---------------------------------------------------------------------------------------------------------------------------------------------
+let Nosex=50//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=60//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=false//turns the body of the cat on and off (my if statment)
+//all of the cat strokes below are originally 2 except whiskers (1.5)
+let BodyStrokeWeight=2
+let HeadStrokeWeight=2
+let EarStrokeWeight=2
+let NoseStrokeWeight=2
+let MouthStrokeWeight=2
+let WhiskersStrokeWeight=1.5
+let EyesStrokeWeight=2
+let ScalingCat=2//scale of whole cat
+//woolvariables---------------------------------------------------------------------------------------------------------------------------------------------
+let ScalingWool=0.75//scale of wool originally 1
+let Woolx=65//originally 110 (changes x value of wool)
+let Wooly=0//originally 166 (changes y value of wool)
+let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
+let Woolfill=4 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let WoolStrokeWeight=2//stroke weight of wool (originally 2)
+
+
+function setup_wallpaper(pWallpaper) {
+    
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+Wallpaper 5
+
+//cottagecore background variabkes-------------------------------------------------------------------------------------------------------------------------
+let horozontalShift=100 //20,40,80,100,200 originally 20
+let verticalShift=100 //20,40,80,100  originally 20
+let horozontalStrokeColour=1//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=1//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+//cat variables---------------------------------------------------------------------------------------------------------------------------------------------
+let Nosex=31//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=40//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=false//turns the body of the cat on and off (my if statment)
+//all of the cat strokes below are originally 2 except whiskers (1.5)
+let BodyStrokeWeight=2
+let HeadStrokeWeight=2
+let EarStrokeWeight=2
+let NoseStrokeWeight=2
+let MouthStrokeWeight=2
+let WhiskersStrokeWeight=1.5
+let EyesStrokeWeight=2
+let ScalingCat=3//scale of whole cat
+//woolvariables---------------------------------------------------------------------------------------------------------------------------------------------
+let ScalingWool=1//scale of wool originally 1
+let Woolx=0//originally 110 (changes x value of wool)
+let Wooly=0//originally 166 (changes y value of wool)
+let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
+let Woolfill=3 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let WoolStrokeWeight=0//stroke weight of wool (originally 2)
+
+
+function setup_wallpaper(pWallpaper) {
+    
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Wallpaper 6
+
+//cottagecore background variabkes-------------------------------------------------------------------------------------------------------------------------
+let horozontalShift=200 //20,40,80,100,200 originally 20
+let verticalShift=200 //20,40,80,100  originally 20
+let horozontalStrokeColour=3//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=2//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+//cat variables---------------------------------------------------------------------------------------------------------------------------------------------
+let Nosex=95//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=65//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=true//turns the body of the cat on and off (my if statment)
+//all of the cat strokes below are originally 2 except whiskers (1.5)
+let BodyStrokeWeight=2
+let HeadStrokeWeight=2
+let EarStrokeWeight=2
+let NoseStrokeWeight=2
+let MouthStrokeWeight=2
+let WhiskersStrokeWeight=1.5
+let EyesStrokeWeight=2
+let ScalingCat=1.5//scale of whole cat
+//woolvariables---------------------------------------------------------------------------------------------------------------------------------------------
+let ScalingWool=1//scale of wool originally 1
+let Woolx=0//originally 110 (changes x value of wool)
+let Wooly=0//originally 166 (changes y value of wool)
+let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
+let Woolfill=3 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let WoolStrokeWeight=0//stroke weight of wool (originally 2)
+
+
+function setup_wallpaper(pWallpaper) {
+    
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
+Wallpaper 7
+
+//cottagecore background variabkes-------------------------------------------------------------------------------------------------------------------------
+let horozontalShift=40 //20,40,80,100,200 originally 20
+let verticalShift=40 //20,40,80,100  originally 20
+let horozontalStrokeColour=1//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=4//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+//cat variables---------------------------------------------------------------------------------------------------------------------------------------------
+let Nosex=100//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=35//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=true//turns the body of the cat on and off (my if statment)
+//all of the cat strokes below are originally 2 except whiskers (1.5)
+let BodyStrokeWeight=2
+let HeadStrokeWeight=2
+let EarStrokeWeight=2
+let NoseStrokeWeight=2
+let MouthStrokeWeight=2
+let WhiskersStrokeWeight=1.5
+let EyesStrokeWeight=2
+let ScalingCat=1//scale of whole cat
+//woolvariables---------------------------------------------------------------------------------------------------------------------------------------------
+let ScalingWool=1//scale of wool originally 1
+let Woolx=130//originally 110 (changes x value of wool)
+let Wooly=65//originally 166 (changes y value of wool)
+let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
+let Woolfill=3 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let WoolStrokeWeight=2//stroke weight of wool (originally 2)
+
+
+function setup_wallpaper(pWallpaper) {
+    
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 80;
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+Wallpaper 8
+
+//cottagecore background variabkes-------------------------------------------------------------------------------------------------------------------------
+let horozontalShift=40 //20,40,80,100,200 originally 20
+let verticalShift=40 //20,40,80,100  originally 20
+let horozontalStrokeColour=3//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=4//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+//cat variables---------------------------------------------------------------------------------------------------------------------------------------------
+let Nosex=50//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=60//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=false//turns the body of the cat on and off (my if statment)
+//all of the cat strokes below are originally 2 except whiskers (1.5)
+let BodyStrokeWeight=1
+let HeadStrokeWeight=1
+let EarStrokeWeight=1
+let NoseStrokeWeight=1
+let MouthStrokeWeight=1
+let WhiskersStrokeWeight=1
+let EyesStrokeWeight=1
+let ScalingCat=2//scale of whole cat
+//woolvariables---------------------------------------------------------------------------------------------------------------------------------------------
+let ScalingWool=0.75//scale of wool originally 1
+let Woolx=65//originally 110 (changes x value of wool)
+let Wooly=0//originally 166 (changes y value of wool)
+let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
+let Woolfill=3 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let WoolStrokeWeight=1//stroke weight of wool (originally 2)
+
+
+function setup_wallpaper(pWallpaper) {
+    
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+Wallpaper 9
+
+//cottagecore background variabkes-------------------------------------------------------------------------------------------------------------------------
+let horozontalShift=40 //20,40,80,100,200 originally 20
+let verticalShift=40 //20,40,80,100  originally 20
+let horozontalStrokeColour=2//1=black,2=yellow,3=green,4=red
+let verticalStrokeColour=4//1=black,2=yellow,3=green,4=red
+let horozontalcottagecoreStrokeWeight=8//stroke weight of horozontal lines
+let verticalcottagecoreStrokeWeight=8//stroke weight of vertical lines
+//cat variables---------------------------------------------------------------------------------------------------------------------------------------------
+let Nosex=50//originally 92.5 middle of nose that is used for cat origin, (50 centre of page)
+let Nosey=56//originally 132.5 middle of nose that is used for cat origin, (60 centre of page)
+let ShowBody=true//turns the body of the cat on and off (my if statment)
+//all of the cat strokes below are originally 2 except whiskers (1.5)
+let BodyStrokeWeight=1
+let HeadStrokeWeight=1
+let EarStrokeWeight=1
+let NoseStrokeWeight=1
+let MouthStrokeWeight=1
+let WhiskersStrokeWeight=1
+let EyesStrokeWeight=1
+let ScalingCat=2//scale of whole cat
+//woolvariables---------------------------------------------------------------------------------------------------------------------------------------------
+let ScalingWool=0.75//scale of wool originally 1
+let Woolx=30//originally 110 (changes x value of wool)
+let Wooly=25//originally 166 (changes y value of wool)
+let FourWoolPattern=(Woolx+Wooly)/2//when (40,40) it creates a pattern of 4 (one of each wool in each corner, scale must be 0.5), when (65,0) it turns into a centered around edges(0.75 scale)
+let Woolfill=4 //changes fill 1 black, 2 white, 3 lightblue, 4 red
+let WoolStrokeWeight=1//stroke weight of wool (originally 2)
+
+
+function setup_wallpaper(pWallpaper) {
+    
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 0;
 }
